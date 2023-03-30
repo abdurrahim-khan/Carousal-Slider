@@ -1,0 +1,92 @@
+body{
+    height: 100vh;
+    width: 100vw;
+}
+#container{
+    position: relative;
+    background-color: rgb(216, 207, 207);
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.static-container{
+    height: 80%;
+    width: 80%;
+    background-color: azure;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.slide-container {
+    position: relative;
+    height: 100%;
+    transition: all 500ms ease-in;
+}
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+}
+.nav-container button {
+    background-color: gray;
+    outline: none;
+    border: none;
+    height: 7px;
+    width: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+}
+.nav-container .active-button {
+    background-color: black;
+}
+#container #btn-left, #container #btn-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
+    z-index: 1000;
+}
+#container div span {
+    
+    font-size: 50px !important;
+    font-weight: bolder !important;
+}
+#btn-left {
+    left: 30px;
+}
+#btn-right {
+    right: 45px;
+}
+.static-container .slider {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+
+    z-index: 100;
+    background-color: black;
+    box-sizing: border-box;
+}
+.static-container .slider img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1200;
+    display: block;
+    box-sizing: border-box;
+}
+#container .hidden{
+    display: none;
+}
